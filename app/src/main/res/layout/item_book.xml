@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="175dp">
+
+
+    <ImageView
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/container_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+
+        android:id="@+id/item_book_img"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/book1" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/item_book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="An American Marriage"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img"
+        app:layout_constraintTop_toTopOf="@+id/container" />
+
+    <TextView
+        android:id="@+id/item_book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="By Tayari Jones"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_title" />
+
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/item_book_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_author" />
+
+    <TextView
+        android:id="@+id/item_book_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="score"
+        app:layout_constraintBottom_toBottomOf="@+id/item_book_ratingbar"
+        app:layout_constraintStart_toEndOf="@+id/item_book_ratingbar"
+        app:layout_constraintTop_toTopOf="@+id/item_book_ratingbar" />
+
+    <TextView
+        android:id="@+id/item_book_pagesrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="225 pages | 23 review"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_ratingbar" />
+
+    <ImageView
+        android:tint="@color/fav_icon_tint"
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
